@@ -6,9 +6,8 @@ file="/storage/emulated/0/Download/puss.gif"
 
 info = Image.open(file)
 
-frames = info.n_frames  # gives total number of frames that gif contains
+frames = info.n_frames  
 
-# creating list of PhotoImage objects for each frames
 im = [tk.PhotoImage(file=file,format=f"gif -index {i}") for i in range(frames)]
 
 count = 0
